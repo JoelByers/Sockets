@@ -37,7 +37,7 @@ int main(){
         return 1;
     }
 
-	char client_message[100];
+	char client_message[100] = {'H', 'i'};
     cout << "Client connection accepted" << endl;
 
     // Receive message from client

@@ -14,7 +14,7 @@ int main(){
     }
 
     struct sockaddr_in server;
-    server.sin_family = inet_addr("0.0.0.0");
+    server.sin_addr.s_addr = inet_addr("0.0.0.0");
 	server.sin_family = AF_INET;
     server.sin_port = htons(8421);
 

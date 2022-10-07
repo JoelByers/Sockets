@@ -14,7 +14,7 @@ int main(){
     }
 
     struct sockaddr_in server;
-    server.sin_family = inet_addr("0.0.0.0");
+    server.sin_addr.s_addr = inet_addr("0.0.0.0");
 	server.sin_family = AF_INET;
     server.sin_port = htons(8421);
 
@@ -24,7 +24,7 @@ int main(){
 		return 1;
 	}
 
-    char* client_message = "Hello There";
+    char client_message[3] = {'h','i','\0'};
     if( send(socket_description , &client_message, strlen(client_message) , 0) < 0)
 	{
 		cout << "Unable to send message to server";
